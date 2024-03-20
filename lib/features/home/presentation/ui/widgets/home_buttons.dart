@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nxt_assessment/features/hotel_check_in/presentation/ui/hotel_check_in_bottom_sheet.dart';
+import 'package:nxt_assessment/features/hotel_check_in/presentation/ui/hotel_check_in_info_widget.dart';
 import 'package:nxt_assessment/utils/constants/app_strings.dart';
 import 'package:nxt_assessment/utils/extensions/theme_extension.dart';
 import 'package:nxt_assessment/utils/helpers/popups_helper.dart';
