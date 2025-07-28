@@ -3,7 +3,7 @@ import 'package:nxt_assessment/features/hotel_check_in/data/models/room_model.da
 
 part 'stay_model.g.dart';
 
-@JsonSerializable(createToJson: false)
+@JsonSerializable()
 class StayModel {
   final String name;
   final String? description;
@@ -35,4 +35,6 @@ class StayModel {
   );
 
   factory StayModel.fromJson(Map<String, dynamic> json) => _$StayModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$StayModelToJson(this);
 }

@@ -4,7 +4,7 @@ import 'package:nxt_assessment/features/hotel_check_in/data/models/ticket_model.
 
 part 'reservation_model.g.dart';
 
-@JsonSerializable(createToJson: false)
+@JsonSerializable()
 class ReservationModel {
   final int id;
   @JsonKey(name: "start_date")
@@ -27,4 +27,6 @@ class ReservationModel {
   );
 
   factory ReservationModel.fromJson(Map<String, dynamic> json) => _$ReservationModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ReservationModelToJson(this);
 }

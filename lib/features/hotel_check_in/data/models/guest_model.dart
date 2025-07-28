@@ -2,7 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'guest_model.g.dart';
 
-@JsonSerializable(createToJson: false)
+@JsonSerializable()
 class GuestModel {
   @JsonKey(name: "first_name")
   final String firstName;
@@ -15,4 +15,6 @@ class GuestModel {
   GuestModel(this.firstName, this.lastName, this.avatar);
 
   factory GuestModel.fromJson(Map<String, dynamic> json) => _$GuestModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$GuestModelToJson(this);
 }

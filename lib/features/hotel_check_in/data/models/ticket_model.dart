@@ -2,7 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'ticket_model.g.dart';
 
-@JsonSerializable(createToJson: false)
+@JsonSerializable()
 class TicketModel {
   @JsonKey(name: "ticket_id")
   final int ticketId;
@@ -25,9 +25,11 @@ class TicketModel {
   );
 
   factory TicketModel.fromJson(Map<String, dynamic> json) => _$TicketModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$TicketModelToJson(this);
 }
 
-@JsonSerializable(createToJson: false)
+@JsonSerializable()
 class TicketUserModel {
   @JsonKey(name: "first_name")
   final String firstName;
@@ -46,4 +48,6 @@ class TicketUserModel {
   );
 
   factory TicketUserModel.fromJson(Map<String, dynamic> json) => _$TicketUserModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$TicketUserModelToJson(this);
 }
