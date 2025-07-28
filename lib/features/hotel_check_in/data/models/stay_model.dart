@@ -3,19 +3,16 @@ import 'package:nxt_assessment/features/hotel_check_in/data/models/room_model.da
 
 part 'stay_model.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 class StayModel {
   final String name;
   final String? description;
   final String? lat;
   final String? lng;
   final String? address;
-  @JsonKey(name: "check_in")
   final String? checkIn;
-  @JsonKey(name: "check_out")
   final String? checkOut;
   final double? stars;
-  @JsonKey(name: "stay_images")
   final List<String>? stayImages;
   final String? amenities;
   final List<RoomModel>? rooms;

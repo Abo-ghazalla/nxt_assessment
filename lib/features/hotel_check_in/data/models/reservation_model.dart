@@ -4,17 +4,12 @@ import 'package:nxt_assessment/features/hotel_check_in/data/models/ticket_model.
 
 part 'reservation_model.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 class ReservationModel {
   final int id;
-  @JsonKey(name: "start_date")
   final String startDate;
-
-  @JsonKey(name: "end_date")
   final String endDate;
   final List<StayModel>? stays;
-
-  @JsonKey(name: "user_tickets")
   final List<TicketModel>?userTickets;
 
 

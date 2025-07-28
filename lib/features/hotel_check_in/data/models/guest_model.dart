@@ -2,12 +2,10 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'guest_model.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 class GuestModel {
-  @JsonKey(name: "first_name")
   final String firstName;
 
-  @JsonKey(name: "last_name")
   final String lastName;
 
   final String? avatar;

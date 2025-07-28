@@ -29,15 +29,11 @@ class TicketModel {
   Map<String, dynamic> toJson() => _$TicketModelToJson(this);
 }
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 class TicketUserModel {
-  @JsonKey(name: "first_name")
   final String firstName;
-  @JsonKey(name: "last_name")
   final String lastName;
   final String? avatar;
-
-  @JsonKey(name: "is_user")
   final bool isUser;
 
   TicketUserModel(
