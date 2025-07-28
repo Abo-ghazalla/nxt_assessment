@@ -1,14 +1,14 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:nxt_assessment/core/data_sources/remote_data_source.dart';
+import 'package:nxt_assessment/core/data_sources/api_data_source.dart';
 import 'package:nxt_assessment/core/model/base_model.dart';
 import 'package:nxt_assessment/core/model/app_base_response.dart';
 import 'package:nxt_assessment/core/model/to_json_convertible.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 import 'package:injectable/injectable.dart';
 
-@Singleton(as: RemoteDataSource)
-class DioClientImpl implements RemoteDataSource {
+@Singleton(as: ApiDataSource)
+class DioClientImpl implements ApiDataSource {
   final Dio _dio;
 
   DioClientImpl(this._dio) {
