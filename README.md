@@ -1,5 +1,6 @@
 
 Welcome to our app! 🚀 Our application seamlessly supports both light and dark themes while leveraging the powerful BLoC pattern for state management.
+This app implements Dio for network requests and hive for local storage
 
 
 ## Getting Started
