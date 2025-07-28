@@ -5,9 +5,13 @@ import 'package:nxt_assessment/utils/app_router/app_router.dart';
 import 'package:nxt_assessment/utils/theme/dark_theme_data.dart';
 import 'package:nxt_assessment/utils/theme/light_them_data.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
+  await Hive.openBox('box');
+
   configureDependencies();
   runApp(const MyApp());
 }
